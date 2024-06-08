@@ -3,7 +3,13 @@ import { PantallaInicio } from "./Componentes/PantallaInicio";
 import { Pregunta } from "./Componentes/Pregunta";
 import { Resultado } from "./Componentes/Resultado";
 
-import { Box, Container, GlobalStyles, Typography } from "@mui/material";
+import {
+	Box,
+	CircularProgress,
+	Container,
+	GlobalStyles,
+	Typography,
+} from "@mui/material";
 
 import { preguntasTrivia } from "./preguntas";
 
@@ -14,6 +20,7 @@ function App() {
 	const [iniciar, setIniciar] = useState(1);
 	const [puntos, setPuntos] = useState(0);
 	const [indice, setIndice] = useState(0);
+	const [spinner, setSpinner] = useState(true);
 
 	/* ----------------- */
 	return (
@@ -60,31 +67,47 @@ function App() {
 							alignItems: "center",
 						}}
 					>
-						<Typography
-							variant="h4"
-							componente="h2"
-							m={3}
-							sx={{ marginTop: "20px", color: "#BD8C0F", textAlign: "center" }}
-						>
-							Comenzó el juego... ¡mucha suerte!
-						</Typography>
+						{spinner && (
+							<>
+								<Typography
+									variant="h4"
+									componente="h2"
+									m={3}
+									sx={{
+										marginTop: "20px",
+										color: "#BD8C0F",
+										textAlign: "center",
+									}}
+								>
+									Comenzó el juego... ¡mucha suerte!
+								</Typography>
+								<Box sx={{ display: "flex" }}>
+									<CircularProgress />
+								</Box>
+								{setTimeout(() => {
+									setSpinner(false);
+								}, 3000)}
+							</>
+						)}
 
-						<Pregunta
-							preguntasTrivia={preguntasTrivia[indice]}
-							setIniciar={setIniciar}
-							puntos={puntos}
-							setPuntos={setPuntos}
-							indice={indice}
-							setIndice={setIndice}
-							total={preguntasTrivia.length}
-						/>
+						{!spinner && (
+							<Pregunta
+								preguntasTrivia={preguntasTrivia[indice]}
+								setIniciar={setIniciar}
+								puntos={puntos}
+								setPuntos={setPuntos}
+								indice={indice}
+								setIndice={setIndice}
+								total={preguntasTrivia.length}
+							/>
+						)}
 					</Container>
 				)}
 				{iniciar === 3 && (
 					<Resultado
 						puntos={puntos}
 						setIniciar={setIniciar}
-						total={preguntasTrivia.length /2}
+						total={preguntasTrivia.length / 2}
 					/>
 				)}
 			</Box>

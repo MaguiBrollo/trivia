@@ -17,20 +17,20 @@ export const PantallaInicio = ({
 		<Container sx={{ padding: "20px" }}>
 			<Typography
 				variant="h3"
-				componente="h2"
+				componente="p"
 				sx={{ marginTop: "30px", color: "#BD8C0F", textAlign: "center" }}
 			>
 				TRIVIA DE PREGUNTAS Y RESPUESTAS
 			</Typography>
 			<CardMedia
 				component="img"
-				height="100%"
+				height="50%"
 				image={imgTrivia}
 				alt="green iguana"
 			/>
 
 			<Typography
-				variant="h4"
+				variant="h5"
 				componente="h2"
 				sx={{ marginTop: "60px", color: "#BD8C0F", textAlign: "center" }}
 			>
@@ -49,8 +49,8 @@ export const PantallaInicio = ({
 					sx={{
 						marginTop: "30px",
 						bgcolor: "#FFA816",
-						height: "80px",
-						fontSize: "1.5rem",
+						height: "70px",
+						fontSize: "1.3rem",
 						":hover": {
 							backgroundColor: "#C19A3F",
 						},
