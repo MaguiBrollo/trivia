@@ -91,10 +91,21 @@ export const Pregunta = ({
 					component="div"
 					sx={{ marginTop: "5px", color: "#BD8C0F", textAlign: "center" }}
 				>
-					Pregunta {indice + 1}/{total} 
+					Pregunta {indice + 1}/{total}
 				</Typography>
 
-				<CardMedia component="img" image={imgURL} alt="Imagen ilustrativa" />
+				<CardMedia
+					component="img"
+					image={imgURL}
+					alt="Imagen ilustrativa"
+					sx={{
+						margin: "5px auto",
+						width: "100%",
+						objectFit: "cover",
+						aspectRatio: "16 / 9",
+						objectPosition: "center",
+					}}
+				/>
 				<CardContent>
 					<Typography gutterBottom variant="h6" component="div">
 						{pregunta}
