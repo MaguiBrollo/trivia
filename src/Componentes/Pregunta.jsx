@@ -113,7 +113,7 @@ export const Pregunta = ({
 
 					<form onSubmit={handleSubmit}>
 						<FormControl
-							sx={{ marginLeft: "20px", width:"100%" }}
+							sx={{width:"100%" }}
 							error={error}
 							variant="standard"
 						>
@@ -163,7 +163,7 @@ export const Pregunta = ({
 								}}
 							>
 								<Button
-									sx={{ mt: 1, mr: 1 }}
+									sx={{ m: 1 }}
 									type="submit"
 									variant="outlined"
 									disabled={!desabilitado}
@@ -173,7 +173,7 @@ export const Pregunta = ({
 
 								{!fin ? (
 									<Button
-										sx={{ mt: 1, mr: 1 }}
+										sx={{ m: 1 }}
 										type="submit"
 										variant="outlined"
 										disabled={desabilitado}
@@ -183,7 +183,7 @@ export const Pregunta = ({
 									</Button>
 								) : (
 									<Button
-										sx={{ mt: 1, mr: 1 }}
+										sx={{ m: 1}}
 										type="submit"
 										variant="outlined"
 										disabled={desabilitado}

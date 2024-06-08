@@ -29,6 +29,7 @@ function App() {
 				styles={{
 					"#root": {
 						width: "100%",
+						minHeight: "100vh",
 					},
 				}}
 			/>
@@ -36,25 +37,16 @@ function App() {
 			<Box
 				sx={{
 					maxWidth: "100%,",
-					height: "100vh",
 					minHeight: "100vh",
 					bgcolor: "#F9E7B9",
 
 					display: "flex",
+					justifyContent: "center",
 					flexDirection: "column",
-					alignItems: "center",
 				}}
 			>
 				{iniciar === 1 && (
-					<Container
-						sx={{
-							height:"100%",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-							justifyContent:"center"
-						}}
-					>
+					<Container>
 						<PantallaInicio
 							setIniciar={setIniciar}
 							setPuntos={setPuntos}
@@ -65,21 +57,17 @@ function App() {
 				{iniciar === 2 && (
 					<Container
 						sx={{
-							height: "100%",
 							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
 							justifyContent: "center",
+							alignItems: "center",
 						}}
 					>
 						{spinner && (
 							<Container
 								sx={{
-									height: "100%",
 									display: "flex",
 									flexDirection: "column",
 									alignItems: "center",
-									justifyContent: "center",
 								}}
 							>
 								<Typography
@@ -95,7 +83,6 @@ function App() {
 								</Typography>
 
 								<CircularProgress sx={{ color: "#BD8C0F" }} />
-
 								{setTimeout(() => {
 									setSpinner(false);
 								}, 3000)}
