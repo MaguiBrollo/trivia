@@ -5,14 +5,13 @@ import imgTrivia from "./../assets/trivia.png";
 
 export const PantallaInicio = ({
 	setIniciar,
-	//
 	setPuntos,
 	setIndice,
 }) => {
 	const iniciarJuego = () => {
 		setIndice(0);
 		setPuntos(0);
-		setIniciar(true);
+		setIniciar(2);
 	};
 	return (
 		<Container sx={{ padding: "20px" }}>

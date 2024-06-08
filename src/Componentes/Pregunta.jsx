@@ -27,7 +27,6 @@ export const Pregunta = ({
 	total,
 }) => {
 	const { pregunta, imgURL, opciones, respuestaCorrecta } = preguntasTrivia;
-
 	const [value, setValue] = useState("");
 	const [error, setError] = useState();
 	const [helperText, setHelperText] = useState("");
@@ -67,17 +66,16 @@ export const Pregunta = ({
 		setDesabilitado(true);
 		setIndice(indice + 1);
 
-		if (indice === total - 2) {
-			//Pregunta anterior
-			setFin(true); //activa boton de fin
+		if (indice + 2 === total) {
+			setFin(true); //activa botón de fin
 		}
 
 		if (indice + 1 === total) {
-			setIniciar(false);
+			setIniciar(3);
 		}
 	};
 
-	/* ---------------------------------- */
+	/* -------------------------- */
 	return (
 		<Card
 			sx={{
@@ -87,8 +85,13 @@ export const Pregunta = ({
 			}}
 		>
 			<CardActionArea>
-				<Typography gutterBottom variant="h6" component="div" sx={{ marginTop: "5px", color: "#BD8C0F", textAlign: "center" }}>
-					Pregunta {indice + 1}/{total}  - Puntos acumulados: {puntos}{" "}
+				<Typography
+					gutterBottom
+					variant="h6"
+					component="div"
+					sx={{ marginTop: "5px", color: "#BD8C0F", textAlign: "center" }}
+				>
+					Pregunta {indice + 1}/{total} 
 				</Typography>
 
 				<CardMedia component="img" image={imgURL} alt="Imagen ilustrativa" />
@@ -112,21 +115,25 @@ export const Pregunta = ({
 									value={opciones[0]}
 									control={<Radio />}
 									label={opciones[0]}
+									disabled={!desabilitado}
 								/>
 								<FormControlLabel
 									value={opciones[1]}
 									control={<Radio />}
 									label={opciones[1]}
+									disabled={!desabilitado}
 								/>
 								<FormControlLabel
 									value={opciones[2]}
 									control={<Radio />}
 									label={opciones[2]}
+									disabled={!desabilitado}
 								/>
 								<FormControlLabel
 									value={opciones[3]}
 									control={<Radio />}
 									label={opciones[3]}
+									disabled={!desabilitado}
 								/>
 							</RadioGroup>
 							<FormHelperText>{helperText}</FormHelperText>

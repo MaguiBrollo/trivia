@@ -19,6 +19,7 @@ export const preguntasTrivia = [
 		],
 		respuestaCorrecta: "Don Quijote de la Mancha",
 	},
+/* 
 	{
 		pregunta: "¿Qué teoría científica es atribuida a Charles Darwin?",
 		imgURL:
@@ -61,5 +62,5 @@ export const preguntasTrivia = [
 			"https://concepto.de/wp-content/uploads/2020/12/pais-e1607399791702.jpg",
 		opciones: ["Política", "Pasado", "Ciudad", "Pais"],
 		respuestaCorrecta: "Ciudad",
-	},
+	}, */
 ];
