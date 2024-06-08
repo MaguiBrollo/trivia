@@ -29,7 +29,6 @@ function App() {
 				styles={{
 					"#root": {
 						width: "100%",
-						minHeight: "100vh",
 					},
 				}}
 			/>
@@ -37,8 +36,10 @@ function App() {
 			<Box
 				sx={{
 					maxWidth: "100%,",
-					bgcolor: "#F9E7B9",
+					height: "100vh",
 					minHeight: "100vh",
+					bgcolor: "#F9E7B9",
+
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
@@ -47,9 +48,11 @@ function App() {
 				{iniciar === 1 && (
 					<Container
 						sx={{
+							height:"100%",
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
+							justifyContent:"center"
 						}}
 					>
 						<PantallaInicio
@@ -62,32 +65,41 @@ function App() {
 				{iniciar === 2 && (
 					<Container
 						sx={{
+							height: "100%",
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
+							justifyContent: "center",
 						}}
 					>
 						{spinner && (
-							<>
+							<Container
+								sx={{
+									height: "100%",
+									display: "flex",
+									flexDirection: "column",
+									alignItems: "center",
+									justifyContent: "center",
+								}}
+							>
 								<Typography
 									variant="h4"
 									componente="h2"
-									m={3}
 									sx={{
-										marginTop: "20px",
 										color: "#BD8C0F",
 										textAlign: "center",
+										margin: "20px auto",
 									}}
 								>
 									Comenzó el juego... ¡mucha suerte!
 								</Typography>
-								<Box sx={{ display: "flex" }}>
-									<CircularProgress sx={{ color: "#BD8C0F"}} />
-								</Box>
+
+								<CircularProgress sx={{ color: "#BD8C0F" }} />
+
 								{setTimeout(() => {
 									setSpinner(false);
 								}, 3000)}
-							</>
+							</Container>
 						)}
 
 						{!spinner && (

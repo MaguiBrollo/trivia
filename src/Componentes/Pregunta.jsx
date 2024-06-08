@@ -29,7 +29,7 @@ export const Pregunta = ({
 	const { pregunta, imgURL, opciones, respuestaCorrecta } = preguntasTrivia;
 	const [value, setValue] = useState("");
 	const [error, setError] = useState();
-	const [helperText, setHelperText] = useState("");
+	const [helperText, setHelperText] = useState(" ");
 	const [desabilitado, setDesabilitado] = useState(true);
 	const [fin, setFin] = useState(false);
 
@@ -79,7 +79,7 @@ export const Pregunta = ({
 	return (
 		<Card
 			sx={{
-				maxWidth: 400,
+				maxWidth: 600,
 				width: "100%",
 				margin: "10px",
 			}}
@@ -112,7 +112,11 @@ export const Pregunta = ({
 					</Typography>
 
 					<form onSubmit={handleSubmit}>
-						<FormControl sx={{ m: 1 }} error={error} variant="standard">
+						<FormControl
+							sx={{ marginLeft: "20px", width:"100%" }}
+							error={error}
+							variant="standard"
+						>
 							<FormLabel id="demo-error-radios">
 								Seleccionar una respuesta...
 							</FormLabel>
@@ -150,10 +154,10 @@ export const Pregunta = ({
 							<FormHelperText>{helperText}</FormHelperText>
 
 							<Stack
-								direction="row"
-								spacing={2}
 								sx={{
 									width: "100%",
+									display:"flex",
+									flexDirection: "row",
 									alignItems: "center",
 									justifyContent: "center",
 								}}
