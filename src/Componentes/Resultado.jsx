@@ -39,17 +39,17 @@ export const Resultado = ({ puntos, setIniciar, total }) => {
 							margin: "10px auto",
 						}}
 					>
-						<Typography gutterBottom variant="h4" component="div">
+						<Typography gutterBottom variant="h4">
 							RESULTADO
 						</Typography>
 						<Typography variant="h5" color="text.secondary">
 							PUNTAJE OBTENIDO: {puntos}
-							{puntos > total && (
-								<Typography gutterBottom variant="h4" component="div">
-									¡¡Felicitaciones excelente puntaje!!
-								</Typography>
-							)}
 						</Typography>
+						{puntos > total && (
+							<Typography gutterBottom variant="h5" component="div">
+								¡¡Felicitaciones excelente puntaje!!
+							</Typography>
+						)}
 					</CardContent>
 				</CardActionArea>
 				<CardActions>

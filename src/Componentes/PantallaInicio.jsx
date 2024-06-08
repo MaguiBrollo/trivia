@@ -20,7 +20,14 @@ export const PantallaInicio = ({
 				componente="p"
 				sx={{ marginTop: "30px", color: "#BD8C0F", textAlign: "center" }}
 			>
-				TRIVIA DE PREGUNTAS Y RESPUESTAS
+				TRIVIA
+			</Typography>
+			<Typography
+				variant="h4"
+				componente="p"
+				sx={{ marginTop: "30px", color: "#BD8C0F", textAlign: "center" }}
+			>
+				UN JUEGO DE PREGUNTAS Y RESPUESTAS
 			</Typography>
 			<CardMedia
 				component="img"

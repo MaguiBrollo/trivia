@@ -82,7 +82,7 @@ function App() {
 									Comenzó el juego... ¡mucha suerte!
 								</Typography>
 								<Box sx={{ display: "flex" }}>
-									<CircularProgress />
+									<CircularProgress sx={{ color: "#BD8C0F"}} />
 								</Box>
 								{setTimeout(() => {
 									setSpinner(false);
