@@ -101,7 +101,7 @@ export const Pregunta = ({
 					</Typography>
 
 					<form onSubmit={handleSubmit}>
-						<FormControl sx={{ m: 3 }} error={error} variant="standard">
+						<FormControl sx={{ m: 1 }} error={error} variant="standard">
 							<FormLabel id="demo-error-radios">
 								Seleccionar una respuesta...
 							</FormLabel>

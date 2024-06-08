@@ -42,11 +42,20 @@ export const Resultado = ({ puntos, setIniciar, total }) => {
 						<Typography gutterBottom variant="h4">
 							RESULTADO
 						</Typography>
-						<Typography variant="h5" color="text.secondary">
+						<Typography
+							variant="h6"
+							color="text.secondary"
+							sx={{ textAlign: "center" }}
+						>
 							PUNTAJE OBTENIDO: {puntos}
 						</Typography>
 						{puntos > total && (
-							<Typography gutterBottom variant="h5" component="div">
+							<Typography
+								gutterBottom
+								variant="h5"
+								component="div"
+								sx={{ textAlign: "center" }}
+							>
 								¡¡Felicitaciones excelente puntaje!!
 							</Typography>
 						)}

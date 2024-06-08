@@ -39,7 +39,11 @@ export const PantallaInicio = ({
 			<Typography
 				variant="h5"
 				componente="h2"
-				sx={{ marginTop: "60px", color: "#BD8C0F", textAlign: "center" }}
+				sx={{
+					marginTop: "60px",
+					color: "#BD8C0F",
+					textAlign: "center",
+				}}
 			>
 				Una selección de preguntas sobre ciencia, arte, historia, geografía,
 				entretenimiento y deporte.
